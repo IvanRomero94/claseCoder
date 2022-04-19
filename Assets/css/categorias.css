@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: none;
+    text-decoration: none;
+    list-style: none;
+}
+@font-face{
+    font-family: delagothic;
+    src: url(/Assets/fonts/DelaGothicOne-Regular.ttf);
+}
+
+/*social-bar*/
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.social-bar{
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+
+.icon-facebook {
+    background: #2E406E;
+    border-radius: 1rem 0 0 0;
+}
+
+.icon-instagram {
+    background: #d6249f;
+}
+
+.icon-twitter {
+    background:  #339dc5;
+}
+
+.icon-whatsapp {
+    background: #00bb2d;
+    border-radius: 1 0 0 1;
+}
+
+.icon:first-child {
+    border-radius: 1rem 0 0 0;
+}
+.icon:last-child {
+    border-radius: 0 0 0 1rem;
+}
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42); 
+}
+
+/*social-bar end*/
+
+/*navbar*/
+
+.header{
+    font-family: delagothic;
+    font-size: 30px;
+    width: 100%;
+}
+
+.logo{
+    
+    width: 50px;
+    padding: 5px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+h2{
+    color: blue;
+    font-family: delagothic;
+}
+
+.menu{
+    background-color: coral;
+    color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+nav a{
+    font-family: delagothic;
+    font-weight: 600;
+    display:inline-block;
+    font-size: 20px;
+    padding: 10px;
+    list-style: none;
+    
+}
+nav a:hover{
+    color: white;
+}
+header{
+    background-image: url(../img/5fa44c4242f7f.jpeg);
+    height: 400px;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(53, 0, 247);
+    font-size: 36px;
+}
+
+/*navbar end*/
+
+/*footer*/
+
+footer{
+    grid-area: footer;
+    background-color: coral;
+    box-sizing: border-box;
+    color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.footerh1{
+    font-family: delagothic;
+    color: blue;
+}
+
+/*footer end*/
+
+/*categorias*/
+
+.menu{
+    grid-area: menu;
+}
+
+.header{
+    grid-area: header;
+}
+
+
+.menu-cat {
+    grid-area: menu-cat;
+    font-family: delagothic;
+    display:flex;
+    justify-content:center;
+    background-color:darksalmon;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.menu-cat li {
+    padding: 10px;
+    list-style: none;
+    
+}
+
+.menu-cat a:hover{
+    color:white;
+    transition: 250ms;
+}
+
+.aside{
+    width: 100%;
+    background-color:beige;
+    display: flex;
+    justify-content: center;
+}
+
+.danette{
+    width: 200px;
+    height: 330px;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px 5px #201f1f ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.danetteimg{
+    width: 100%;
+    padding: 5px;
+}
+.brahma{
+    width: 200px;
+    height: 330px;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px 5px #201f1f ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.brahmaimg{
+    width: 100%;
+    padding: 5px;
+}
+.heineken{
+    width: 200px;
+    height: 330px;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px 5px #201f1f ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.heinekenimg{
+    width: 100%;
+    padding: 5px;
+}
+
+.categorias-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "menu menu"
+                         "header header"
+                         "menu-cat aside"
+                         "footer footer";
+}
+
+@media (max-width: 700px){
+        .categorias-grid{
+            grid-template:  "menu"
+                            "header"
+                            "menu-cat"
+                            "aside"
+                            "footer" ;
+        }
+    }
