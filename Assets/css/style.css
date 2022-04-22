@@ -14,11 +14,13 @@
 a{
     text-decoration: none;
     color: rgb(0, 0, 0);
+    transition: 200ms;
 }
 
 .nombre{
     font-family: delagothic;
     font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .logo{
@@ -32,13 +34,14 @@ a{
 }
 
 h2{
+    text-shadow: black 0.1em 0.1em 0.2em;
     color: blue;
     font-family: delagothic;
+    font-size: 40px;
 }
 
 .menu{
-    
-    background-color: coral;
+    background-image: linear-gradient(to right, red, beige);
     color: white;
     width: 100%;
     height: 60px;
@@ -89,8 +92,12 @@ header{
     justify-content: center;
 }
 .danetteimg{
+    transition: width 5s , transform 5s;
     width: 100%;
     padding: 5px;
+}
+.danetteimg:hover{
+    transform:translate(5px,5px)
 }
 
 .brahma{
@@ -106,8 +113,12 @@ header{
     justify-content: center;
 }
 .brahmaimg{
+    transition: width 5s , transform 5s;
     width: 100%;
     padding: 5px;
+}
+.brahmaimg:hover{
+    transform: translate(5px,5px);
 }
 .heineken{
     width: 200px;
@@ -122,8 +133,12 @@ header{
     justify-content: center;
 }
 .heinekenimg{
+    transition: width 5s , transform 5s;
     width: 100%;
     padding: 5px;
+}
+.heinekenimg:hover{
+    transform: translate(5px,5px);
 }
 .sancor{
     width: 200px;
@@ -138,8 +153,12 @@ header{
     justify-content: center;
 }
 .sancorimg{
+    transition: width 5s , transform 5s;
     width: 100%;
     padding: 5px;
+}
+.sancorimg:hover{
+    transform: translate(5px,5px);
 }
 .ser{
     width: 200px;
@@ -154,8 +173,12 @@ header{
     justify-content: center;
 }
 .serimg{
+    transition: width 5s , transform 5s;
     width: 100%;
     padding: 5px;
+}
+.serimg:hover{
+    transform: translate(5px,5px);
 }
 .cocacola{
     width: 200px;
@@ -170,8 +193,12 @@ header{
     justify-content: center;
 }
 .cocaimg{
+    transition: width 5s , transform 5s;
     width: 100%;
     padding: 5px;
+}
+.cocaimg:hover{
+    transform: translate(5px,5px);
 }
 footer{
     grid-area: footer;
@@ -189,7 +216,13 @@ footer{
     font-family: delagothic;
     color: blue;
 }
-
+.footer a{
+    color: black;
+}
+.footer a:hover{
+    color: white;
+    transition: 150ms;
+}
 .social-bar{
     position: fixed;
     right: 0;
@@ -250,5 +283,9 @@ footer{
     .nombre{
         font-size: small;
     }  
-
+    footer{
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+    }
 }
